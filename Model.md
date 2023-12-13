@@ -9,15 +9,15 @@ As Redes Neurais Recorrentes (RNNs) são projetadas para processar sequências d
 
 A lógica matemática da RNN para uma etapa de tempo t é dada por:
 
-\[ h_t = \sigma(W_{hh} \cdot h_{t-1} + W_{xh} \cdot x_t + b_h) \]
+![\[ h_t = \sigma(W_{hh} \cdot h_{t-1} + W_{xh} \cdot x_t + b_h) \]](https://latex.codecogs.com/gif.latex?%5C%5B%20h_t%20%3D%20%5Csigma%28W_%7Bhh%7D%20%5Ccdot%20h_%7Bt-1%7D%20&plus;%20W_%7Bxh%7D%20%5Ccdot%20x_t%20&plus;%20b_h%29%20%5C%5D)
 
 Onde:
-- \( h_t \) é o estado oculto no tempo t.
-- \( x_t \) é a entrada no tempo t.
-- \( W_{hh} \) é a matriz de pesos para a conexão retroativa.
-- \( W_{xh} \) é a matriz de pesos para a entrada.
-- \( b_h \) é o vetor de viés.
-- \( \sigma \) é a função de ativação.
+- ![\( h_t \)](https://latex.codecogs.com/gif.latex?%5C%28%20h_t%20%5C%29) é o estado oculto no tempo t.
+- ![\( x_t \)](https://latex.codecogs.com/gif.latex?%5C%28%20x_t%20%5C%29) é a entrada no tempo t.
+- ![\( W_{hh} \)](https://latex.codecogs.com/gif.latex?%5C%28%20W_%7Bhh%7D%20%5C%29) é a matriz de pesos para a conexão retroativa.
+- ![\( W_{xh} \)](https://latex.codecogs.com/gif.latex?%5C%28%20W_%7Bxh%7D%20%5C%29) é a matriz de pesos para a entrada.
+- ![\( b_h \)](https://latex.codecogs.com/gif.latex?%5C%28%20b_h%20%5C%29) é o vetor de viés.
+- ![\( \sigma \)](https://latex.codecogs.com/gif.latex?%5C%28%20%5Csigma%20%5C%29) é a função de ativação.
 
 ## 2. Long Short-Term Memory (LSTM):
 
@@ -28,18 +28,18 @@ As Long Short-Term Memories (LSTMs) são uma melhoria das RNNs, projetadas para 
 
 A lógica matemática da LSTM para uma etapa de tempo t é dada por:
 
-\[ f_t = \sigma(W_{hf} \cdot h_{t-1} + W_{xf} \cdot x_t + b_f) \]
+![\[ f_t = \sigma(W_{hf} \cdot h_{t-1} + W_{xf} \cdot x_t + b_f) \]
 \[ i_t = \sigma(W_{hi} \cdot h_{t-1} + W_{xi} \cdot x_t + b_i) \]
 \[ o_t = \sigma(W_{ho} \cdot h_{t-1} + W_{xo} \cdot x_t + b_o) \]
 \[ \tilde{c}_t = \tanh(W_{hc} \cdot h_{t-1} + W_{xc} \cdot x_t + b_c) \]
 \[ c_t = f_t \cdot c_{t-1} + i_t \cdot \tilde{c}_t \]
-\[ h_t = o_t \cdot \tanh(c_t) \]
+\[ h_t = o_t \cdot \tanh(c_t) \]](https://latex.codecogs.com/gif.latex?%5C%5B%20f_t%20%3D%20%5Csigma%28W_%7Bhf%7D%20%5Ccdot%20h_%7Bt-1%7D%20&plus;%20W_%7Bxf%7D%20%5Ccdot%20x_t%20&plus;%20b_f%29%20%5C%5D%20%5C%5B%20i_t%20%3D%20%5Csigma%28W_%7Bhi%7D%20%5Ccdot%20h_%7Bt-1%7D%20&plus;%20W_%7Bxi%7D%20%5Ccdot%20x_t%20&plus;%20b_i%29%20%5C%5D%20%5C%5B%20o_t%20%3D%20%5Csigma%28W_%7Bho%7D%20%5Ccdot%20h_%7Bt-1%7D%20&plus;%20W_%7Bxo%7D%20%5Ccdot%20x_t%20&plus;%20b_o%29%20%5C%5D%20%5C%5B%20%5Ctilde%7Bc%7D_t%20%3D%20%5Ctanh%28W_%7Bhc%7D%20%5Ccdot%20h_%7Bt-1%7D%20&plus;%20W_%7Bxc%7D%20%5Ccdot%20x_t%20&plus;%20b_c%29%20%5C%5D%20%5C%5B%20c_t%20%3D%20f_t%20%5Ccdot%20c_%7Bt-1%7D%20&plus;%20i_t%20%5Ccdot%20%5Ctilde%7Bc%7D_t%20%5C%5D%20%5C%5B%20h_t%20%3D%20o_t%20%5Ccdot%20%5Ctanh%28c_t%29%20%5C%5D)
 
 Onde:
-- \( f_t, i_t, o_t \) são os portões (esquecimento, entrada, saída).
-- \( \tilde{c}_t \) é o candidato a novo valor de célula.
-- \( c_t \) é o estado da célula de memória.
-- \( h_t \) é o estado oculto.
+- ![\( f_t, i_t, o_t \)](https://latex.codecogs.com/gif.latex?%5C%28%20f_t%2C%20i_t%2C%20o_t%20%5C%29) são os portões (esquecimento, entrada, saída).
+- ![\( \tilde{c}_t \)](https://latex.codecogs.com/gif.latex?%5C%28%20%5Ctilde%7Bc%7D_t%20%5C%29) é o candidato a novo valor de célula.
+- ![\( c_t \)](https://latex.codecogs.com/gif.latex?%5C%28%20c_t%20%5C%29) é o estado da célula de memória.
+- ![\( h_t \)](https://latex.codecogs.com/gif.latex?%5C%28%20h_t%20%5C%29) é o estado oculto.
 
 # Observações sobre a Aplicação:
 
@@ -48,8 +48,6 @@ Onde:
 
 ### Pontos de Atenção:
 - O treinamento e a otimização desses modelos podem exigir recursos computacionais significativos devido à complexidade das arquiteturas, especialmente ao empregar modelos pré-treinados como o RoBERTa. É essencial realizar uma validação robusta para garantir a generalização do modelo para novos dados.
-
-Lembre-se de documentar adequadamente as escolhas de arquitetura, hiperparâmetros e métricas de avaliação, bem como considerar estratégias de otimização para mitigar demandas computacionais.
 
 ## Perspectivas das Áreas: Ciência de Dados, Engenharia de Software e Ciências da Computação
 
@@ -76,5 +74,3 @@ Em Ciências da Computação, a aplicação de modelos como LSTMs destaca o ente
 
 #### Referências Adicionais:
 - [Devlin, J., Chang, M. W., Lee, K., & Toutanova, K. (2019). BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding.](https://arxiv.org/abs/1810.04805)
-
-Lembre-se de que a aplicação dessas perspectivas deve ser ajustada de acordo com as necessidades específicas do projeto e o contexto da aplicação.
