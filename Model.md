@@ -54,7 +54,22 @@ Onde:
 ### 1. Ciência de Dados:
 
 #### Perspectiva:
+
 Na Ciência de Dados, a escolha de modelos como LSTMs e LLM é alinhada ao desejo de obter insights mais profundos a partir dos dados. Essas arquiteturas são fundamentais para tarefas que exigem uma compreensão contextualizada e semântica, como análise de sentimentos em texto.
+#### Recomendações:
+
+#### Treinamento e Validação:
+
+Realizar treinamento robusto e validação cuidadosa para garantir que o modelo generalize bem para novos dados.
+
+#### Tuning de Hiperparâmetros:
+Explorar diferentes configurações de hiperparâmetros para otimizar o desempenho do modelo.
+
+#### Documentação:
+Documentar de forma abrangente as escolhas de arquitetura, hiperparâmetros e métricas de avaliação.
+
+#### Caminho Optado no Código:
+A aplicação de Redes Neurais Recorrentes (RNN), Long Short-Term Memory (LSTM) e Modelos de Linguagem de Longa Escala (LLM) sugere uma compreensão profunda do contexto e das dependências temporais.
 
 #### Referências Adicionais:
 - [Hochreiter, S., & Schmidhuber, J. (1997). Long Short-Term Memory. Neural Computation, 9(8), 1735–1780.](https://www.bioinf.jku.at/publications/older/2604.pdf)
@@ -64,6 +79,16 @@ Na Ciência de Dados, a escolha de modelos como LSTMs e LLM é alinhada ao desej
 #### Perspectiva:
 Na Engenharia de Software, é vital considerar a escalabilidade e eficiência do código. Modelos mais complexos, como LSTMs e LLM, podem exigir mais recursos computacionais, e a modularidade do código é essencial para facilitar a manutenção e o desenvolvimento futuro.
 
+#### Recomendações:
+
+#### Modularidade:
+Organizar o código de maneira modular para facilitar manutenção e extensões futuras.
+
+#### Eficiência Computacional:
+Otimizar o código para lidar com a complexidade das arquiteturas, especialmente ao empregar modelos pré-treinados como o RoBERTa.
+
+#### Caminho Optado no Código: (...)
+
 #### Referências Adicionais:
 - [Colah, C. (2015). Understanding LSTM Networks.](https://colah.github.io/posts/2015-08-Understanding-LSTMs/)
 
@@ -71,6 +96,16 @@ Na Engenharia de Software, é vital considerar a escalabilidade e eficiência do
 
 #### Perspectiva:
 Em Ciências da Computação, a aplicação de modelos como LSTMs destaca o entendimento das complexidades do processamento de sequências. Essas arquiteturas são fundamentais para abordar desafios específicos relacionados à análise de dados sequenciais, como no processamento de linguagem natural.
+
+#### Recomendações:
+
+#### Estudo de Caso:
+Realizar estudos de caso específicos para entender como essas arquiteturas abordam desafios de processamento de sequências.
+
+#### Implementação Eficiente:
+Garantir que a implementação do modelo seja eficiente e alinhada aos objetivos específicos do projeto.
+
+#### Caminho Optado no Código: (...)
 
 #### Referências Adicionais:
 - [Devlin, J., Chang, M. W., Lee, K., & Toutanova, K. (2019). BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding.](https://arxiv.org/abs/1810.04805)
