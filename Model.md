@@ -21,7 +21,7 @@ Onde:
 
 ## 2. Long Short-Term Memory (LSTM):
 
-![Representação de uma LSTM](https://cdn.discordapp.com/attachments/1184622679685333042/1184622778557665362/16127Screenshot_2021-01-19_at_11.50.55_PM.png?ex=658ca4ef&is=657a2fef&hm=34defd5982e0379bde19e94620405a626d1be869207b182b3a3fb99b4a0efd21&)
+![Representação de uma LSTM](https://cdn.discordapp.com/attachments/1184622679685333042/1184854506333274162/The_Architecture_of_the_LSTM_Model.png?ex=658d7cbf&is=657b07bf&hm=1c04074b5e50b187a4047464a935ea864898d9a592114249fb11d36c97640ef6&)
 
 #### Explicação:
 As Long Short-Term Memories (LSTMs) são uma melhoria das RNNs, projetadas para superar o problema do "desaparecimento do gradiente". Elas introduzem uma estrutura de células de memória e portões (esquecimento, entrada, saída).
