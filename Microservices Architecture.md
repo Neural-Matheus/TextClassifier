@@ -28,7 +28,7 @@ A separação em microserviços permite que equipes distribuídas foquem em áre
 
 # Diagrama de Arquitetura:
 
-Diagrama de Arquitetura disponível [neste link](https://discord.com/channels/1178776533196882020/1184622679685333042/1184667045682483200).
+Diagrama de Arquitetura disponível ![neste link](https://discord.com/channels/1178776533196882020/1184622679685333042/1184667045682483200).
 
 ---
 
