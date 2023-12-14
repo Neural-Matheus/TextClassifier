@@ -109,3 +109,25 @@ Garantir que a implementação do modelo seja eficiente e alinhada aos objetivos
 
 #### Referências Adicionais:
 - [Devlin, J., Chang, M. W., Lee, K., & Toutanova, K. (2019). BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding.](https://arxiv.org/abs/1810.04805)
+
+## Leituras:
+
+1. **Redes Neurais Recorrentes (RNN):**
+   - [Understanding LSTM Networks](https://colah.github.io/posts/2015-08-Understanding-LSTMs/) - Chris Olah.
+
+2. **Long Short-Term Memory (LSTM):**
+   - [Long Short-Term Memory](https://www.bioinf.jku.at/publications/older/2604.pdf) - Sepp Hochreiter, Jürgen Schmidhuber.
+
+3. **Ciência de Dados:**
+   - [Data Science for Business](https://www.amazon.com/Data-Science-Business-Data-Analytic-Thinking/dp/1449361323) - Foster Provost, Tom Fawcett.
+
+4. **Engenharia de Software:**
+   - [Clean Code: A Handbook of Agile Software Craftsmanship](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882) - Robert C. Martin.
+
+5. **Ciências da Computação:**
+   - [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805) - Jacob Devlin, Ming-Wei Chang, Kenton Lee, Kristina Toutanova.
+
+6. **Referências Adicionais:**
+   - [Machine Learning Mastery](https://machinelearningmastery.com/start-here/#algorithms) - Jason Brownlee.
+   - [Natural Language Processing in Python](https://www.amazon.com/Natural-Language-Processing-Python-Linguistics/dp/0596516495) - Steven Bird, Ewan Klein, Edward Loper.
+   - [TensorFlow Tutorials](https://www.tensorflow.org/tutorials) - TensorFlow Documentation.
