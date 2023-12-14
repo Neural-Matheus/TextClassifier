@@ -15,13 +15,13 @@ A falha em um microserviço não compromete o sistema como um todo. A arquitetur
 ## Rápido Desenvolvimento e Implantação:
 O desenvolvimento paralelo de microserviços possibilita uma entrega rápida e contínua. Além disso, a implantação isolada de cada serviço reduz o impacto nos demais componentes do sistema.
 
-## 6. Adaptabilidade a Mudanças:
+## Adaptabilidade a Mudanças:
 A modularidade dos microserviços facilita a introdução de novas funcionalidades e a adaptação a mudanças nos requisitos, proporcionando agilidade no desenvolvimento.
 
-## 7. Isolamento de Responsabilidades:
+## Isolamento de Responsabilidades:
 Cada microserviço é responsável por uma funcionalidade específica, promovendo a clareza nas responsabilidades e facilitando a compreensão do sistema como um todo.
 
-## 8. Facilitação de Equipes Distribuídas:
+## Facilitação de Equipes Distribuídas:
 A separação em microserviços permite que equipes distribuídas foquem em áreas específicas do sistema, promovendo a colaboração eficiente em projetos complexos.
 
 ---
@@ -42,13 +42,13 @@ Recebe um arquivo de texto (md, docx, txt, json, etc.) e encaminha para o Servi�
 
 ---
 
-# 4. Comunicação entre Microsserviços:
+# Comunicação entre Microsserviços:
 
 Comunicação realizada através de protocolos REST e gRPC.
 
 ---
 
-# 5. Bancos de Dados:
+# Bancos de Dados:
 
 Utilização do PostgreSQL.
 
