@@ -1,4 +1,4 @@
-# Arquituras de Modelo: RNN e LSTM
+# Arquiteturas de Modelo: RNN e LSTM
 
 ## 1. Redes Neurais Recorrentes (RNN):
 
