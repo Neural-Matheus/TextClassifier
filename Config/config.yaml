@@ -1,0 +1,18 @@
+model:
+  nb_filters: 100
+  FFN_units: 256
+  nb_classes: 2
+  dropout_rate: 0.5
+
+training:
+  batch_size: 32
+  nb_epochs: 2
+
+data:
+  tokenizer_url: "https://tfhub.dev/tensorflow/bert_en_uncased_L-12_H-768_A-12/1"
+  data_directoryG: "/content/drive/MyDrive/opengpttext-clean/chatgpt/"
+  data_directoryH: "/content/drive/MyDrive/opengpttext-clean/openweb/"
+  new_column_name: "value"
+
+files:
+  checkpoint_path: "/content/drive/MyDrive/opengpttext-clean"
