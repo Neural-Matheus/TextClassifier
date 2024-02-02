@@ -1,1 +1,0 @@
-chmod +x lint.sh
