@@ -1,0 +1,13 @@
+transformers
+jsonlines
+torch
+pandas
+numpy
+tensorflow
+matplotlib
+seaborn
+bs4
+nltk
+bert-for-tf2
+sentencepiece
+tensorflow-hub
