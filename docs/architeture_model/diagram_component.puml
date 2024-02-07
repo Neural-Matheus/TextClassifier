@@ -1,0 +1,23 @@
+@startuml
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Component.puml
+
+Container_Boundary(cb, "Text Classifier System") {
+    Component(DCF, "Data Cleaning Function", "Cleans raw text data")
+    Component(DEF, "Data Encoding Function", "Encodes cleaned data")
+    Component(DC, "DCNNBERTEmbedding Class", "Provides model architecture")
+    Component(MCC, "Model Compilation Code", "Compiles the model")
+    Component(MTC, "Model Training Code", "Trains the model")
+    Component(MTEC, "Model Testing Code", "Tests the model and returns classification results")
+}
+
+Actor(User, "User", "Provides raw text data and trains model")
+
+Rel(User, DCF, "Provides raw text data")
+Rel(DCF, DEF, "Provides cleaned data")
+Rel(DEF, DC, "Provides encoded data")
+Rel(User, MCC, "Trains model")
+Rel(DC, MCC, "Provides model architecture")
+Rel(MCC, MTC, "Provides compiled model")
+Rel(MTC, MTEC, "Provides trained model")
+Rel(MTEC, User, "Returns classification results")
+@enduml

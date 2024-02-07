@@ -1,0 +1,15 @@
+@startuml
+!includeurl https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+
+Person(analistas, "Analistas de segurança")
+Person(desenvolvedores, "Desenvolvedores de modelos de linguagem")
+Person(gerentes, "Gerentes de produto")
+Person(usuarios, "Usuários finais")
+
+System(aplicacao, "Aplicação de Classificação de Texto")
+
+Rel(analistas, aplicacao, "Usa")
+Rel(desenvolvedores, aplicacao, "Desenvolve")
+Rel(gerentes, aplicacao, "Gerencia")
+Rel(usuarios, aplicacao, "Usa")
+@enduml
