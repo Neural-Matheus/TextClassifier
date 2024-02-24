@@ -1,0 +1,15 @@
+@startuml
+!includeurl https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+System_Boundary(aplicacao, "Aplicação de Classificação de Texto") {
+  Container(ui, "Interface de Usuário (UI)", "Permite aos usuários interagir com a aplicação")
+  Container(backend, "Backend de Processamento", "Processa os dados de entrada e gera resultados")
+  Container(modelo, "Modelo de Machine Learning", "Classifica os textos com base nos dados de treinamento")
+  Container(feedback, "Sistema de Feedback", "Coleta e processa o feedback dos usuários")
+}
+
+Rel(analistas, ui, "Usa")
+Rel(desenvolvedores, backend, "Desenvolve")
+Rel(gerentes, modelo, "Gerencia")
+Rel(usuarios, feedback, "Fornece feedback")
+@enduml

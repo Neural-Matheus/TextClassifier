@@ -1,0 +1,14 @@
+@startuml
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Container.puml
+
+System_Ext(User, "User", "User")
+System(DP, "Data Preprocessing", "System")
+System(MLM, "Machine Learning Model", "System")
+System(TT, "Training and Testing", "System")
+
+Rel(User, DP, "Provides raw text data")
+Rel(DP, MLM, "Provides cleaned and encoded data")
+Rel(User, TT, "Trains and tests model")
+Rel(MLM, TT, "Provides model for training and testing")
+Rel(TT, User, "Returns classification results")
+@enduml

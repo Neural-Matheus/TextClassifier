@@ -1,0 +1,28 @@
+@startuml
+!includeurl https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+Container_Boundary(backend, "Backend de Processamento") {
+  Component(servidor, "Servidor Web/API", "Recebe solicitações e retorna respostas")
+  Component(pre_processamento, "Módulo de Pré-processamento de Texto", "Limpa e tokeniza os textos")
+  Component(pos_processamento, "Módulo de Pós-processamento de Resultados", "Transforma os resultados do modelo em um formato legível")
+}
+
+Container_Boundary(modelo, "Modelo de Machine Learning") {
+  Component(treinamento, "Treinamento e Inferência do Modelo", "Treina o modelo e faz previsões")
+  Component(gerenciamento, "Gerenciamento de Versões do Modelo", "Gerencia as diferentes versões do modelo")
+  Component(avaliacao, "Rotinas de Avaliação de Desempenho", "Avalia o desempenho do modelo")
+}
+
+Container_Boundary(feedback, "Sistema de Feedback") {
+  Component(interface_feedback, "Interface de Feedback", "Coleta feedback dos usuários")
+  Component(pre_processamento_feedback, "Módulo de Pré-processamento de Feedback", "Processa o feedback recebido")
+  Component(treinamento_incremental, "Rotinas de Treinamento Incremental", "Usa o feedback para melhorar o modelo")
+}
+
+Rel(servidor, pre_processamento, "Envia dados para")
+Rel(pre_processamento, pos_processamento, "Envia dados para")
+Rel(treinamento, gerenciamento, "Envia modelos para")
+Rel(gerenciamento, avaliacao, "Envia modelos para")
+Rel(interface_feedback, pre_processamento_feedback, "Envia feedback para")
+Rel(pre_processamento_feedback, treinamento_incremental, "Envia feedback para")
+@enduml
