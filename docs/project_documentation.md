@@ -1,65 +1,160 @@
-### Objetivo do Projeto:
+# Especificação Detalhada dos Requisitos do Projeto
 
-O projeto tem como objetivo desenvolver um modelo de linguagem natural capaz de distinguir se um texto foi gerado por uma Linguagem de Modelo de Máquina (LLM) ou por uma pessoa. O sistema buscará atingir uma classificação precisa, adaptando-se a diferentes arquiteturas de modelos de linguagem e sendo capaz de lidar com novos padrões de linguagem ao longo do tempo.
+## Requisitos Funcionais:
 
-Os requisitos funcionais incluem a implementação de algoritmos de aprendizado de máquina para análise de características distintivas, adequação a diferentes modelos de linguagem, adaptabilidade a novos dados e desempenho em diversos idiomas. Além disso, o sistema deve processar dados não estruturados e manter uma alta precisão na classificação.
+### RF1. Classificação Precisa:
+- **Descrição:** Implementar algoritmos de aprendizado de máquina capazes de distinguir entre textos gerados por humanos e por modelos de linguagem de máquina (LLM).
+  - **RF1.1.** Utilizar modelos de classificação como BERT, RoBERTa, e redes neurais profundas (DNN) para análise de texto.
+  - **RF1.2.** Treinamento do modelo utilizando um conjunto de dados balanceado com exemplos de textos gerados por humanos e LLMs.
+  - **RF1.3.** Aplicar técnicas de pré-processamento de texto, como tokenização, lematização, e remoção de stop words.
+  - **RF1.4.** Implementar métricas de avaliação, incluindo precisão, recall, F1-score e curva ROC-AUC.
+  - **RF1.5.** Realizar validação cruzada para garantir a robustez do modelo.
+- **Critérios de Aceitação:**
+  - A precisão da classificação deve ser superior a 90%.
+  - A taxa de falsos positivos e falsos negativos deve ser inferior a 5%.
 
-Adicionalmente, considera-se a possibilidade de suporte a múltiplos domínios e a identificação de técnicas específicas de geração de LLM, bem como a implementação de um sistema de feedback para melhorias contínuas.
+### RF2. Adequação a Diferentes Modelos:
+- **Descrição:** O sistema deve ser flexível o suficiente para suportar diferentes arquiteturas de modelos de linguagem, como GPT, BERT, Gemini, etc.
+  - **RF2.1.** Modularizar a arquitetura do sistema para permitir fácil integração com diferentes modelos de linguagem.
+  - **RF2.2.** Implementar adaptadores específicos para cada tipo de LLM para uniformizar a entrada e saída de dados.
+  - **RF2.3.** Testar o sistema com pelo menos três tipos diferentes de LLMs.
+- **Critérios de Aceitação:**
+  - A arquitetura deve permitir a fácil integração e teste com pelo menos três tipos diferentes de LLMs.
+  - A precisão da classificação deve ser mantida entre 80% - 90% independentemente do modelo de linguagem utilizado.
 
-O projeto visa criar um modelo robusto, escalável e eficiente, cumprindo regulamentações éticas e de privacidade, com a capacidade de treinamento contínuo para aprimoramento ao longo do tempo.
+### RF3. Adaptabilidade a Novos Dados:
+- **Descrição:** O sistema deve aprender continuamente e se adaptar a novos padrões de linguagem.
+  - **RF3.1.** Implementar pipelines de aprendizado online para atualização contínua do modelo.
+  - **RF3.2.** Configurar a coleta de novos dados periodicamente para manter o modelo atualizado.
+  - **RF3.3.** Aplicar técnicas de aprendizado incremental para incorporar novos dados sem a necessidade de retrain completo.
+- **Critérios de Aceitação:**
+  - Implementação de técnicas de aprendizado online.
+  - Atualização do modelo com novos dados pelo menos uma vez por mês.
 
-### Requisitos Funcionais:
+### RF4. Desempenho em Diferentes Idiomas:
+- **Descrição:** Treinar e testar o modelo em uma variedade de idiomas.
+  - **RF4.1.** Coletar conjuntos de dados de treinamento e teste em pelo menos cinco idiomas diferentes.
+  - **RF4.2.** Implementar técnicas de pré-processamento específicas para cada idioma.
+  - **RF4.3.** Validar a precisão da classificação para cada idioma individualmente.
+- **Critérios de Aceitação:**
+  - O modelo deve ser treinado em pelo menos cinco idiomas diferentes.
+  - A precisão da classificação deve ser superior a 90% em todos os idiomas testados.
 
-1. **Classificação Precisa:**
-   - O sistema deve empregar algoritmos de aprendizado de máquina capazes de analisar características distintivas entre textos gerados por linguagem natural e textos gerados por modelos de linguagem de máquina. A precisão na classificação deve ser medida por métricas como taxa de verdadeiros positivos, verdadeiros negativos, falsos positivos e falsos negativos.
+### RF5. Manuseio de Dados Não Estruturados:
+- **Descrição:** O sistema deve processar textos de diferentes comprimentos e formatos, incluindo dados não estruturados.
+  - **RF5.1.** Implementar técnicas de processamento para diferentes comprimentos de texto (50 a 2000 palavras).
+  - **RF5.2.** Suportar diversos formatos de texto, incluindo parágrafos contínuos, listas, e conversas.
+  - **RF5.3.** Utilizar embeddings de texto para representar dados não estruturados.
+- **Critérios de Aceitação:**
+  - Capacidade de processar textos de diferentes comprimentos e formatos.
+  - Precisão na classificação de textos não estruturados deve ser mantida acima de 90%.
 
-2. **Adequação a Diferentes Modelos:**
-   - O modelo deve ser projetado de maneira flexível para suportar diferentes arquiteturas de modelos de linguagem, garantindo que a análise seja eficaz independentemente do tipo específico de LLM utilizado.
+### RF6. Identificação de Técnicas de Geração:
+- **Descrição:** Identificar características específicas associadas a técnicas de geração de LLM.
+  - **RF6.1.** Desenvolver algoritmos para detectar padrões de repetição, coesão textual e estruturas gramaticais específicas.
+  - **RF6.2.** Implementar análises de frequências de palavras e n-gramas.
+  - **RF6.3.** Gerar relatórios mensais com insights sobre as técnicas de geração detectadas.
+- **Critérios de Aceitação:**
+  - Implementação de algoritmos de detecção de padrões.
+  - Relatórios mensais detalhando as técnicas de geração identificadas.
 
-3. **Adaptabilidade a Novos Dados:**
-   - O sistema deve ser capaz de aprender continuamente e se adaptar a novos padrões de linguagem que possam surgir. Isso pode envolver técnicas de treinamento online e atualização periódica do modelo.
+### RF7. Feedback para Melhorias:
+- **Descrição:** Implementar um sistema de feedback para aprimorar continuamente a classificação.
+  - **RF7.1.** Desenvolver uma interface de usuário para coleta de feedback.
+  - **RF7.2.** Criar um mecanismo para integrar feedback no processo de atualização do modelo.
+  - **RF7.3.** Analisar e incorporar feedback mensalmente.
+- **Critérios de Aceitação:**
+  - Interface de usuário funcional para envio de feedback.
+  - Mecanismo operacional de integração de feedback no modelo.
 
-4. **Desempenho em Diferentes Idiomas:**
-   - O modelo deve ser treinado e testado em uma variedade de idiomas para garantir que a classificação seja robusta em contextos multilíngues.
+### RF8. Suporte a Múltiplos Domínios:
+- **Descrição:** O modelo deve ser aplicável a textos em diferentes domínios.
+  - **RF8.1.** Coletar conjuntos de dados de diferentes domínios (notícias, literatura técnica, redes sociais).
+  - **RF8.2.** Testar a precisão da classificação em cada domínio.
+  - **RF8.3.** Ajustar o modelo para melhorar a precisão em domínios específicos se necessário.
+- **Critérios de Aceitação:**
+  - Testes realizados em pelo menos três domínios diferentes.
+  - Precisão da classificação mantida acima de 90% em todos os domínios.
 
-5. **Manuseio de Dados Não Estruturados:**
-   - O sistema deve ser capaz de processar textos de diferentes comprimentos e formatos, incluindo dados não estruturados, como conversas informais e textos coloquiais.
-### Requisitos Funcionais Adicionais:
+## Requisitos Não Funcionais:
 
-6. **Identificação de Técnicas de Geração:**
-   - Além de distinguir entre LLM e texto humano, o sistema pode ser expandido para identificar características específicas associadas a técnicas de geração de LLM, como padrões de repetição, coesão textual e estruturas gramaticais específicas.
+### RNF1. Desempenho:
+- **Descrição:** O modelo deve fornecer uma resposta rápida.
+- **Sub-requisitos:**
+  - **RNF1.1.** Otimizar o código para reduzir o tempo de inferência.
+  - **RNF1.2.** Implementar técnicas de caching para resultados comuns.
+- **Critérios de Aceitação:**
+  - Tempo de inferência inferior a 200 ms.
 
-7. **Feedback para Melhorias:**
-   - Implementar um sistema de feedback que permite aos usuários fornecerem correções ou indicarem instâncias em que a classificação do modelo pode ser aprimorada, contribuindo assim para melhorias contínuas.
+### RNF2. Confiança e Interpretabilidade:
+- **Descrição:** O sistema deve fornecer explicações claras sobre suas classificações.
+- **Sub-requisitos:**
+  - **RNF2.1.** Implementar LIME (Local Interpretable Model-agnostic Explanations) ou SHAP (SHapley Additive exPlanations).
+  - **RNF2.2.** Gerar explicações para cada decisão de classificação.
+  - **RNF2.3.** Treinamentos e tutoriais para usuários finais.
+- **Critérios de Aceitação:**
+  - Implementação de técnicas de interpretabilidade.
+  - Explicações claras e compreensíveis fornecidas para cada classificação.
 
-8. **Suporte a Múltiplos Domínios:**
-   - O modelo pode ser estendido para lidar com textos em diferentes domínios (por exemplo, notícias, literatura técnica, redes sociais), garantindo uma aplicabilidade mais ampla.
+### RNF3. Segurança:
+- **Descrição:** O modelo deve ser resistente a ataques adversários.
+- **Sub-requisitos:**
+  - **RNF3.1.** Implementar defesas contra ataques adversários, como adversarial training.
+  - **RNF3.2.** Realizar testes de penetração para identificar vulnerabilidades.
+- **Critérios de Aceitação:**
+  - Implementação de defesas robustas contra ataques.
+  - Relatórios de segurança que confirmem a resiliência do modelo.
 
-### Requisitos Não Funcionais:
+### RNF4. Escalabilidade:
+- **Descrição:** O sistema deve ser escalável para grandes volumes de dados.
+- **Sub-requisitos:**
+  - **RNF4.1.** Utilizar arquitetura distribuída para processamento de dados.
+  - **RNF4.2.** Implementar balanceamento de carga para garantir desempenho.
+- **Critérios de Aceitação:**
+  - Suporte para aumento de 10 vezes no volume de dados sem comprometer o desempenho.
 
-1. **Desempenho:**
-   - O modelo deve fornecer uma resposta rápida, com tempos de inferência minimizados para suportar aplicações em tempo real.
+### RNF5. Manutenibilidade:
+- **Descrição:** O código e os artefatos do modelo devem ser bem documentados.
+- **Sub-requisitos:**
+  - **RNF5.1.** Documentação detalhada do código e do processo de desenvolvimento.
+  - **RNF5.2.** Utilização de ferramentas de controle de versão como Git.
+  - **RNF5.3.** Realização de revisões de código regulares.
+- **Critérios de Aceitação:**
+  - Documentação abrangente e atualizada disponível.
+  - Processo de atualização do modelo claramente definido.
 
-2. **Confiança e Interpretabilidade:**
-   - O sistema deve fornecer explicações claras sobre as razões por trás de suas classificações, facilitando a compreensão e aumentando a confiança dos usuários na validade das decisões do modelo.
+### RNF6. Privacidade:
+- **Descrição:** Respeitar a privacidade dos usuários.
+- **Sub-requisitos:**
+  - **RNF6.1.** Implementar técnicas de anonimização e criptografia de dados.
+  - **RNF6.2.** Garantir conformidade com regulamentos de privacidade, como GDPR.
+- **Critérios de Aceitação:**
+  - Conformidade total com regulamentos de privacidade.
+  - Dados de usuários protegidos contra acesso não autorizado.
 
-3. **Segurança:**
-   - O modelo deve ser resistente a ataques adversários e manipulações, garantindo a integridade e a confiabilidade das decisões de classificação.
+### RNF7. Facilidade de Integração:
+- **Descrição:** O modelo deve ser facilmente integrável a sistemas existentes.
+- **Sub-requisitos:**
+  - **RNF7.1.** Desenvolver APIs RESTful para interação com o modelo.
+  - **RNF7.2.** Fornecer exemplos de código para integração em diferentes linguagens.
+- **Critérios de Aceitação:**
+  - Disponibilidade de APIs RESTful.
+  - Documentação e exemplos de integração claros.
 
-4. **Escalabilidade:**
-   - O sistema deve ser capaz de dimensionar eficientemente para lidar com grandes volumes de dados e cargas de usuários crescentes sem comprometer o desempenho.
+### RNF8. Treinabilidade Contínua:
+- **Descrição:** Permitir a atualização contínua do modelo com novos dados.
+- **Sub-requisitos:**
+  - **RNF8.1.** Implementar pipelines de treinamento contínuo.
+  - **RNF8.2.** Utilizar aprendizado incremental para incorporar novos dados.
+- **Critérios de Aceitação:**
+  - Implementação de pipelines de treinamento contínuo.
+  - Modelo atualizado continuamente com novos dados.
 
-5. **Manutenibilidade:**
-   - O código-fonte e os artefatos do modelo devem ser bem documentados e organizados, facilitando futuras atualizações, correções e manutenção.
-
-6. **Privacidade:**
-   - Garantir que o modelo respeite a privacidade dos usuários, evitando a retenção desnecessária de informações sensíveis e aplicando práticas de segurança adequadas.
-
-7. **Facilidade de Integração:**
-   - O modelo deve ser facilmente integrável a sistemas existentes por meio de APIs ou outras interfaces, permitindo uma adoção suave em ambientes já estabelecidos.
-
-8. **Treinabilidade Contínua:**
-   - Permitir a atualização do modelo com novos dados para melhorar a precisão ao longo do tempo, incorporando mecanismos de treinamento contínuo.
-
-9. **Interpretação Humana:**
-   - Certificar-se de que as decisões do modelo são apresentadas de maneira que seja compreensível para usuários humanos, promovendo transparência e interpretabilidade.
+### RNF9. Interpretação Humana:
+- **Descrição:** As decisões do modelo devem ser compreensíveis para usuários humanos.
+- **Sub-requisitos:**
+  - **RNF9.1.** Desenvolver interfaces de usuário que apresentem as decisões do modelo de forma clara.
+  - **RNF9.2.** Fornecer tutoriais e treinamentos para usuários finais.
+- **Critérios de Aceitação:**
+  - Interfaces de usuário intuitivas e compreensíveis.
+  - Treinamentos e tutoriais disponíveis para usuários finais.
