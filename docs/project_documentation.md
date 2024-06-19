@@ -24,21 +24,19 @@
 
 ### RF3. Adaptabilidade a Novos Dados:
 - **Descrição:** O sistema deve aprender continuamente e se adaptar a novos padrões de linguagem.
-  - **RF3.1.** Implementar pipelines de aprendizado online para atualização contínua do modelo.
-  - **RF3.2.** Configurar a coleta de novos dados periodicamente para manter o modelo atualizado.
-  - **RF3.3.** Aplicar técnicas de aprendizado incremental para incorporar novos dados sem a necessidade de retrain completo.
+  - **RF3.1.** Configurar a coleta de novos dados periodicamente para manter o modelo atualizado.
+  - **RF3.2.** Aplicar técnicas de aprendizado incremental para incorporar novos dados sem a necessidade de retrain completo.
 - **Critérios de Aceitação:**
-  - Implementação de técnicas de aprendizado online.
-  - Atualização do modelo com novos dados pelo menos uma vez por mês.
+  - Atualização do modelo com novos dados conforme a atualização dos modelos de linguagens.
+  - O desempenho do modelo após a atualização deve ser documentado, mostrando manutenção ou melhoria da precisão.
 
 ### RF4. Desempenho em Diferentes Idiomas:
-- **Descrição:** Treinar e testar o modelo em uma variedade de idiomas.
-  - **RF4.1.** Coletar conjuntos de dados de treinamento e teste em pelo menos cinco idiomas diferentes.
-  - **RF4.2.** Implementar técnicas de pré-processamento específicas para cada idioma.
-  - **RF4.3.** Validar a precisão da classificação para cada idioma individualmente.
+- **Descrição:** Treinar e testar o modelo em dois idiomas (inglês e português).
+  - **RF4.1.** Implementar técnicas de pré-processamento específicas para cada idioma.
+  - **RF4.2.** Validar a precisão da classificação para cada idioma individualmente.
 - **Critérios de Aceitação:**
-  - O modelo deve ser treinado em pelo menos cinco idiomas diferentes.
-  - A precisão da classificação deve ser superior a 90% em todos os idiomas testados.
+  - O modelo deve ser treinado ou validado em pelo menos dois idiomas diferentes.
+  - A precisão da classificação deve ser superior a 80% em todos os idiomas testados.
 
 ### RF5. Manuseio de Dados Não Estruturados:
 - **Descrição:** O sistema deve processar textos de diferentes comprimentos e formatos, incluindo dados não estruturados.
@@ -47,16 +45,14 @@
   - **RF5.3.** Utilizar embeddings de texto para representar dados não estruturados.
 - **Critérios de Aceitação:**
   - Capacidade de processar textos de diferentes comprimentos e formatos.
-  - Precisão na classificação de textos não estruturados deve ser mantida acima de 90%.
+  - Precisão na classificação de textos não estruturados deve ser mantida acima de 80%.
 
 ### RF6. Identificação de Técnicas de Geração:
 - **Descrição:** Identificar características específicas associadas a técnicas de geração de LLM.
   - **RF6.1.** Desenvolver algoritmos para detectar padrões de repetição, coesão textual e estruturas gramaticais específicas.
   - **RF6.2.** Implementar análises de frequências de palavras e n-gramas.
-  - **RF6.3.** Gerar relatórios mensais com insights sobre as técnicas de geração detectadas.
 - **Critérios de Aceitação:**
   - Implementação de algoritmos de detecção de padrões.
-  - Relatórios mensais detalhando as técnicas de geração identificadas.
 
 ### RF7. Feedback para Melhorias:
 - **Descrição:** Implementar um sistema de feedback para aprimorar continuamente a classificação.
@@ -67,20 +63,10 @@
   - Interface de usuário funcional para envio de feedback.
   - Mecanismo operacional de integração de feedback no modelo.
 
-### RF8. Suporte a Múltiplos Domínios:
-- **Descrição:** O modelo deve ser aplicável a textos em diferentes domínios.
-  - **RF8.1.** Coletar conjuntos de dados de diferentes domínios (notícias, literatura técnica, redes sociais).
-  - **RF8.2.** Testar a precisão da classificação em cada domínio.
-  - **RF8.3.** Ajustar o modelo para melhorar a precisão em domínios específicos se necessário.
-- **Critérios de Aceitação:**
-  - Testes realizados em pelo menos três domínios diferentes.
-  - Precisão da classificação mantida acima de 90% em todos os domínios.
-
 ## Requisitos Não Funcionais:
 
 ### RNF1. Desempenho:
 - **Descrição:** O modelo deve fornecer uma resposta rápida.
-- **Sub-requisitos:**
   - **RNF1.1.** Otimizar o código para reduzir o tempo de inferência.
   - **RNF1.2.** Implementar técnicas de caching para resultados comuns.
 - **Critérios de Aceitação:**
@@ -88,7 +74,6 @@
 
 ### RNF2. Confiança e Interpretabilidade:
 - **Descrição:** O sistema deve fornecer explicações claras sobre suas classificações.
-- **Sub-requisitos:**
   - **RNF2.1.** Implementar LIME (Local Interpretable Model-agnostic Explanations) ou SHAP (SHapley Additive exPlanations).
   - **RNF2.2.** Gerar explicações para cada decisão de classificação.
   - **RNF2.3.** Treinamentos e tutoriais para usuários finais.
@@ -96,65 +81,42 @@
   - Implementação de técnicas de interpretabilidade.
   - Explicações claras e compreensíveis fornecidas para cada classificação.
 
-### RNF3. Segurança:
-- **Descrição:** O modelo deve ser resistente a ataques adversários.
-- **Sub-requisitos:**
-  - **RNF3.1.** Implementar defesas contra ataques adversários, como adversarial training.
-  - **RNF3.2.** Realizar testes de penetração para identificar vulnerabilidades.
-- **Critérios de Aceitação:**
-  - Implementação de defesas robustas contra ataques.
-  - Relatórios de segurança que confirmem a resiliência do modelo.
-
-### RNF4. Escalabilidade:
+### RNF3. Escalabilidade:
 - **Descrição:** O sistema deve ser escalável para grandes volumes de dados.
-- **Sub-requisitos:**
-  - **RNF4.1.** Utilizar arquitetura distribuída para processamento de dados.
-  - **RNF4.2.** Implementar balanceamento de carga para garantir desempenho.
+  - **RNF3.1.** Utilizar arquitetura distribuída para processamento de dados.
+  - **RNF3.2.** Implementar balanceamento de carga para garantir desempenho.
 - **Critérios de Aceitação:**
   - Suporte para aumento de 10 vezes no volume de dados sem comprometer o desempenho.
 
-### RNF5. Manutenibilidade:
+### RNF4. Manutenibilidade:
 - **Descrição:** O código e os artefatos do modelo devem ser bem documentados.
 - **Sub-requisitos:**
-  - **RNF5.1.** Documentação detalhada do código e do processo de desenvolvimento.
-  - **RNF5.2.** Utilização de ferramentas de controle de versão como Git.
-  - **RNF5.3.** Realização de revisões de código regulares.
+  - **RNF4.1.** Documentação detalhada do código e do processo de desenvolvimento.
+  - **RNF4.2.** Utilização de ferramentas de controle de versão como Git.
+  - **RNF4.3.** Realização de revisões de código regulares.
 - **Critérios de Aceitação:**
   - Documentação abrangente e atualizada disponível.
   - Processo de atualização do modelo claramente definido.
 
-### RNF6. Privacidade:
+### RNF5. Privacidade:
 - **Descrição:** Respeitar a privacidade dos usuários.
-- **Sub-requisitos:**
-  - **RNF6.1.** Implementar técnicas de anonimização e criptografia de dados.
-  - **RNF6.2.** Garantir conformidade com regulamentos de privacidade, como GDPR.
+  - **RNF5.1.** Implementar técnicas de anonimização e criptografia de dados.
+  - **RNF5.2.** Garantir conformidade com regulamentos de privacidade, como GDPR.
 - **Critérios de Aceitação:**
   - Conformidade total com regulamentos de privacidade.
   - Dados de usuários protegidos contra acesso não autorizado.
 
-### RNF7. Facilidade de Integração:
+### RNF6. Facilidade de Integração:
 - **Descrição:** O modelo deve ser facilmente integrável a sistemas existentes.
-- **Sub-requisitos:**
-  - **RNF7.1.** Desenvolver APIs RESTful para interação com o modelo.
-  - **RNF7.2.** Fornecer exemplos de código para integração em diferentes linguagens.
+  - **RNF6.1.** Desenvolver APIs RESTful ou gRPC para interação com o modelo.
+  - **RNF6.2.** Fornecer exemplos de código para integração em diferentes linguagens.
 - **Critérios de Aceitação:**
-  - Disponibilidade de APIs RESTful.
+  - Disponibilidade de APIs RESTful ou gRPC.
   - Documentação e exemplos de integração claros.
 
-### RNF8. Treinabilidade Contínua:
-- **Descrição:** Permitir a atualização contínua do modelo com novos dados.
-- **Sub-requisitos:**
-  - **RNF8.1.** Implementar pipelines de treinamento contínuo.
-  - **RNF8.2.** Utilizar aprendizado incremental para incorporar novos dados.
-- **Critérios de Aceitação:**
-  - Implementação de pipelines de treinamento contínuo.
-  - Modelo atualizado continuamente com novos dados.
-
-### RNF9. Interpretação Humana:
+### RNF7. Interpretação Humana:
 - **Descrição:** As decisões do modelo devem ser compreensíveis para usuários humanos.
-- **Sub-requisitos:**
-  - **RNF9.1.** Desenvolver interfaces de usuário que apresentem as decisões do modelo de forma clara.
-  - **RNF9.2.** Fornecer tutoriais e treinamentos para usuários finais.
+  - **RNF7.1.** Desenvolver interfaces de usuário que apresentem as decisões do modelo de forma clara.
+  - **RNF7.2.** Fornecer tutoriais e treinamentos para usuários finais.
 - **Critérios de Aceitação:**
   - Interfaces de usuário intuitivas e compreensíveis.
-  - Treinamentos e tutoriais disponíveis para usuários finais.
