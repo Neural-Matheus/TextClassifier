@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  my-tf2-service:
+    build: .
+    container_name: my-tf2-container
+    volumes:
+      - .:/app
+    ports:
+      - "8888:8888"
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: python3
